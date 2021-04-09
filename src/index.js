@@ -3,6 +3,9 @@ import "./scss/main_style.scss";
 import projectFactory from "./projectFactory";
 import taskFactory from "./taskFactory";
 import { renderProjects, renderTasks } from "./displayController";
+import mobileMenu from "./mobileMenu";
+
+mobileMenu();
 
 const projects = [];
 const project1 = projectFactory("Test 1");

@@ -1,0 +1,63 @@
+@import "color-scheme";
+
+/* Navigation */
+.project-section ul {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project-section li {
+  background: $green;
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  color: $black;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+[aria-controls="mobile-menu"] {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  [aria-controls="mobile-menu"] {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .project-section ul {
+    max-height: 0;
+    overflow: hidden;
+    transform: rotateX(90deg);
+    transition: all 0.5s ease-out;
+  }
+
+  [aria-expanded="true"] ~ ul {
+    display: grid;
+    max-height: 500px;
+    transform: rotateX(0);
+  }
+
+  [aria-expanded="true"] ~ ul ~ li ~ ul {
+    display: grid;
+    max-height: 500px;
+    transform: rotateX(0);
+  }
+
+  [aria-expanded="false"] .close {
+    display: none;
+  }
+
+  [aria-expanded="true"] .close {
+    display: inline-block;
+  }
+
+  [aria-expanded="true"] .open {
+    display: none;
+  }
+}
