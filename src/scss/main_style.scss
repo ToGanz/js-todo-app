@@ -1,5 +1,5 @@
 @import "color-scheme";
-
+@import "button";
 html {
   /* border-box box model allows us to add padding and border to our elements without increasing their size */
   box-sizing: border-box;
@@ -9,7 +9,7 @@ html {
   font-size: 10px;
   color: var($black);
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
-  background-color: $green;
+  @include button;
 }
 
 /*
