@@ -10,8 +10,13 @@
       <header>
         <h1>Just do it</h1>
       </header>
-      <section class="add-project">test
-        <h2>Project</h2>
+      <section class="project-section">
+        <button aria-expanded="false" aria-controls="menu-list">
+          <span class="open">☰</span>
+          <span class="close">×</span>
+          Projects
+        </button>
+
         <div class="project-form-container"></div>
           <form class="formInput project-form">
             <label for="project-title">Title</label>
@@ -19,9 +24,15 @@
             <button type="submit" class="addProject btn">Create Project</button>
           </form>
         </div>
+
+        <ul id="projects-list" class="list">
+
+        </ul>
+    
       </section>
-      <section id="display-projects">
-        <ul id="project-list" class="list">
+      <section id="tasks-section">
+        <button class="popup btn">Add Task</button>
+        <ul id="tasks-list" class="list">
 
         </ul>
       </section>

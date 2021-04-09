@@ -2,7 +2,7 @@ import "./scss/main_style.scss";
 
 import projectFactory from "./projectFactory";
 import taskFactory from "./taskFactory";
-import render from "./displayController";
+import { renderProjects, renderTasks } from "./displayController";
 
 const projects = [];
 const project1 = projectFactory("Test 1");
@@ -20,4 +20,5 @@ project2.addTask(task2);
 projects.push(project1);
 projects.push(project2);
 
-render(projects);
+renderProjects(projects);
+renderTasks(project1.tasks);
