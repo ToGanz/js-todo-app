@@ -11,24 +11,20 @@
         <h1>Just do it</h1>
       </header>
       <section class="project-section">
-        <button aria-expanded="false" aria-controls="menu-list">
+        <form class="formInput project-form">
+          <label for="project-title">Title</label>
+          <input type="text" id="project-title">
+          <button type="submit" class="addProject btn">Create Project</button>
+        </form>
+        <button aria-expanded="false" aria-controls="mobile-menu">
           <span class="open">☰</span>
           <span class="close">×</span>
           Projects
         </button>
 
-        <div class="project-form-container"></div>
-          <form class="formInput project-form">
-            <label for="project-title">Title</label>
-            <input type="text" id="project-title">
-            <button type="submit" class="addProject btn">Create Project</button>
-          </form>
-        </div>
-
-        <ul id="projects-list" class="list">
+        <ul class="mobile-menu list" id="projects-list">
 
         </ul>
-    
       </section>
       <section id="tasks-section">
         <button class="popup btn">Add Task</button>
