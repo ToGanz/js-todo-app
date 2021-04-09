@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Just do it</title>
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div id="app">
-      <section class="add-project">
-        
+      <header>
+        <h1>Just do it</h1>
+      </header>
+      <section class="add-project">test
+        <h2>Project</h2>
+        <div class="project-form-container"></div>
+          <form class="formInput project-form">
+            <label for="project-title">Title</label>
+            <input type="text" id="project-title">
+            <button type="submit" class="addProject btn">Create Project</button>
+          </form>
+        </div>
       </section>
-      <section class="display"></section>
+      <section id="display-projects">
+        <ul id="project-list" class="list">
+
+        </ul>
+      </section>
     </div>
     <script src="main.js"></script>
   </body>
