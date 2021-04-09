@@ -20,4 +20,4 @@ project2.addTask(task2);
 projects.push(project1);
 projects.push(project2);
 
-console.log(render(projects));
+render(projects);
