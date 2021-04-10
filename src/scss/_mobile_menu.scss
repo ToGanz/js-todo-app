@@ -1,6 +1,9 @@
 @import "color-scheme";
 
 /* Navigation */
+.project-section {
+  width: 100%;
+}
 .project-section ul {
   display: grid;
   grid-gap: 10px;
@@ -38,12 +41,6 @@
   }
 
   [aria-expanded="true"] ~ ul {
-    display: grid;
-    max-height: 500px;
-    transform: rotateX(0);
-  }
-
-  [aria-expanded="true"] ~ ul ~ li ~ ul {
     display: grid;
     max-height: 500px;
     transform: rotateX(0);
