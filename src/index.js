@@ -13,7 +13,7 @@ const project2 = new Project("Test 2");
 
 const task1 = new Task("task1", "what is this", "21.01.2022", 8);
 const task2 = new Task("task2", "what is this", "21.01.2022", 0);
-
+task1.completed = true;
 project1.addTask(task1);
 project1.addTask(task2);
 

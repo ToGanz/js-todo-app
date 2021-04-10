@@ -18,7 +18,9 @@ function renderProjects(projects) {
 
 function renderTasks(tasks) {
   const tasksList = document.querySelector("#tasks-list");
+  const completedTasksList = document.querySelector("#completed-tasks-list");
   tasksList.innerHTML = "";
+  completedTasksList.innerHTML = "";
   tasks.forEach((task, taskIndex) => {
     const taskListItem = document.createElement("LI");
     taskListItem.classList.add("task", `task-${taskIndex}`);
@@ -57,7 +59,11 @@ function renderTasks(tasks) {
       `;
     taskListItem.appendChild(checkDiv);
 
-    tasksList.appendChild(taskListItem);
+    if (!task.completed) {
+      tasksList.appendChild(taskListItem);
+    } else {
+      completedTasksList.appendChild(taskListItem);
+    }
   });
 }
 
