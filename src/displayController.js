@@ -32,9 +32,9 @@ function renderTasks(tasks) {
     innerTaskDiv.classList.add("inner-task");
     innerTaskDiv.innerHTML = `
         <h1>${task.title}</h1>
-        <h3>Priority: ${task.getPriority()}</h3>
+        <h3>Priority: ${task.priority}</h3>
         <h4>Due: ${task.dueDate}</h4>
-        <p>${task.getDescription()}</p>
+        <p>${task.description}</p>
       `;
     taskListItem.appendChild(innerTaskDiv);
 
