@@ -32,19 +32,47 @@ input:focus {
   outline: 1px auto $green;
 }
 
-check
+
 
 // Grid it
-
 
 #app {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  grid-gap: 20px;
 }
 
 #tasks-section {
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  grid-gap: 10px;
+}
+
+#tasks-section ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  grid-gap: 10px;
+}
+
+#tasks-section li {
+  width: 100%;
+}
+
+
+.project-section {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 4px solid $green;
+}
+
+header {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
 li {
