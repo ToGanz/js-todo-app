@@ -23,4 +23,7 @@
     position: relative;
     top: 1px;
   }
+  .btn:focus {
+    outline: 1px auto $green;
+  }
 }
