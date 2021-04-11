@@ -21,7 +21,6 @@ project1.addTask(task2);
 project1.addTask(task3);
 project1.addTask(task4);
 
-
 project2.addTask(task1);
 project2.addTask(task2);
 
