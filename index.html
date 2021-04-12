@@ -28,7 +28,54 @@
         </ul>
       </section>
       <section id="tasks-section">
+        <div class="active-project" id="project-0">Active Project</div>
         <button class="popup btn">Add Task</button>
+        <!-- ModalStart -->
+        <div id="task-modal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span id="addClose" class="close-modal" >&times;</span>
+            <form class="formInput task-form">
+              <label for="task-title">Title</label>
+              <input type="text" id="task-title">
+              <label for="task-description">Description</label>
+              <textarea id="task-description" rows="3" cols="16.5"></textarea>
+              <label for="task-dueDate">Due Date</label>
+              <input type="date" id="task-dueDate">
+              <label for="task-priority">Priority</label>
+              <input type="number" id="task-priority">
+              <!-- <label for="task-completed">Task complete</label>
+              <input type="checkbox" id="task-completed"> -->
+              <button type="submit" class="addTask btn">Add Task</button>
+            </form>
+          </div>
+        </div>
+        <!-- ModalEND -->
+
+        <!-- ModalStart -->
+        <div id="editTask-modal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span id="editClose" class="close-modal">&times;</span>
+            <form class="formInput editTask-form">
+              <label for="editTask-title">Title</label>
+              <input type="text" id="editTask-title">
+              <label for="editTask-description">Description</label>
+              <textarea id="editTask-description" rows="3" cols="16.5"></textarea>
+              <label for="editTask-dueDate">Due Date</label>
+              <input type="date" id="editTask-dueDate">
+              <label for="editTask-priority">Priority</label>
+              <input type="number" id="editTask-priority">
+              <span id="taskId" class="hidden"></span>
+              <!-- <label for="task-completed">Task complete</label>
+              <input type="checkbox" id="task-completed"> -->
+              <button type="submit" class="editTask btn">Edit Task</button>
+              <button class="removeTask btn icon">Remove Task</button>
+            </form>
+          </div>
+        </div>
+        <!-- ModalEND -->
+
         <ul id="tasks-list" class="list">
 
         </ul>
