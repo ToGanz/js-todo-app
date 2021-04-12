@@ -1,3 +1,5 @@
+import { format } from "date-fns";
+
 class Task {
   constructor(title, description, dueDate, priority) {
     this.title = title;
@@ -5,6 +7,19 @@ class Task {
     this.dueDate = dueDate;
     this.priority = priority;
     this.completed = false;
+  }
+
+  set dueDate(value) {
+    const date = format(
+      new Date(value.slice(0, 4), value.slice(5, 7) - 1, value.slice(8, 10)),
+      "dd.MM.yyyy"
+    );
+
+    this._dueDate = date;
+  }
+
+  get dueDate() {
+    return this._dueDate;
   }
 
   set title(value) {
