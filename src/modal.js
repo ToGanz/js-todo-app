@@ -18,6 +18,7 @@ const eventSetUp = (projects) => {
   const form = document.querySelector(".formInput");
 
   const tasks = document.querySelector("#tasks-list");
+  const completedTasks = document.querySelector("#completed-tasks-list");
 
   // modal
   popup.addEventListener("click", () => {
@@ -93,6 +94,7 @@ const eventSetUp = (projects) => {
   }
 
   tasks.addEventListener("click", displayEditTask);
+  completedTasks.addEventListener("click", displayEditTask);
 
   function editTask(e) {
     e.preventDefault();
@@ -114,10 +116,6 @@ const eventSetUp = (projects) => {
   // remove Task
   function removeTask(e) {
     e.preventDefault();
-    // get active project
-    // let project =
-
-    // let dataEl = document.querySelector("div[data-task]");
 
     const taskId = document.querySelector("#taskId").value;
     const project = getActiveProject(projects);
@@ -135,20 +133,22 @@ const eventSetUp = (projects) => {
     // get active project
     // let project =
 
-    const id = e.target.id;
-    const project = getActiveProject(projects);
-    const task = project.tasks[taskId];
     if (e.target.matches("input")) {
+      const parent = e.target.parentNode.parentNode;
+      const taskId = parent.getAttribute("data-task");
+      const project = getActiveProject(projects);
+      const task = project.tasks[taskId];
       if (e.target.checked) {
         task.completed = true;
       } else {
         task.completed = false;
       }
+      renderTasks(project.tasks);
     }
-    renderTasks(project.tasks);
   }
 
   tasks.addEventListener("click", toggleCheck);
+  completedTasks.addEventListener("click", toggleCheck);
 };
 
 export default eventSetUp;
