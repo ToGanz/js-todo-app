@@ -1,6 +1,9 @@
 @import "color-scheme";
 @import "mobile_menu";
 @import "button";
+@import "modal";
+@import "input";
+
 html {
   /* border-box box model allows us to add padding and border to our elements without increasing their size */
   box-sizing: border-box;
@@ -29,9 +32,6 @@ body {
   padding: 15px;
 }
 
-input:focus {
-  outline: 1px auto $green;
-}
 
 // Grid it
 
@@ -40,6 +40,8 @@ input:focus {
   grid-template-columns: 1fr;
   justify-items: center;
   grid-gap: 20px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 #tasks-section {
@@ -52,27 +54,25 @@ input:focus {
   ul {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: start;
     grid-gap: 10px;
   }
 
-  li {
-    width: 100%;
-  }
+  
 
   .task {
     text-align: start;
     padding: 10px 10px 0 10px;
     display: grid;
-    grid-template-columns: 3fr auto;
+    grid-template-columns: minmax(150px, 400px) 100px;
     grid-gap: 10px;
     margin-top: 5px;
     color: $gray;
   
     .inner-task {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
       grid-template-rows: auto auto auto;
       grid-gap: 10px;
       color: $gray;

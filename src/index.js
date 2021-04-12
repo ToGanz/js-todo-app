@@ -4,6 +4,7 @@ import Project from "./Project";
 import Task from "./Task";
 import { renderProjects, renderTasks } from "./displayController";
 import mobileMenu from "./mobileMenu";
+import eventSetUp from "./modal";
 
 mobileMenu();
 
@@ -27,5 +28,6 @@ project2.addTask(task2);
 projects.push(project1);
 projects.push(project2);
 
+eventSetUp(projects);
 renderProjects(projects);
 renderTasks(project1.tasks);

@@ -1,0 +1,21 @@
+input:focus {
+  outline: 1px auto $green;
+}
+
+#tasks-section {
+
+  .formInput{
+    padding-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    font-size: 14px;
+    height: 100%;
+    textarea {
+      resize: none;
+    }
+
+    
+  }
+  
+}

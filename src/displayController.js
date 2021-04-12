@@ -29,6 +29,7 @@ function renderTasks(tasks) {
     } else {
       taskListItem.classList.add("unfinished");
     }
+    taskListItem.setAttribute("data-task", `${taskIndex}`);
 
     const innerTaskDiv = document.createElement("DIV");
     innerTaskDiv.classList.add("inner-task");
