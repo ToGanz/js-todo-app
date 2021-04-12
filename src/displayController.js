@@ -6,6 +6,7 @@ function renderProjects(projects) {
     const projectListItem = document.createElement("LI");
     projectListItem.classList.add("project");
     projectListItem.id = `project-${projectIndex}`;
+    projectListItem.setAttribute("data-project", `${projectIndex}`);
 
     const projectTitle = document.createElement("H1");
     projectTitle.classList.add("project-title");

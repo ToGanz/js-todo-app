@@ -2,7 +2,8 @@ import Task from "./Task";
 
 import { renderTasks } from "./displayController";
 
-const eventSetUp = (projects) => {
+// functions for task modal
+const taskEventSetUp = (projects) => {
   const popup = document.querySelector(".popup");
   const addClose = document.querySelector("#addClose");
   const editClose = document.querySelector("#editClose");
@@ -130,9 +131,6 @@ const eventSetUp = (projects) => {
 
   // Set complete Status
   function toggleCheck(e) {
-    // get active project
-    // let project =
-
     if (e.target.matches("input")) {
       const parent = e.target.parentNode.parentNode;
       const taskId = parent.getAttribute("data-task");
@@ -151,4 +149,4 @@ const eventSetUp = (projects) => {
   completedTasks.addEventListener("click", toggleCheck);
 };
 
-export default eventSetUp;
+export default taskEventSetUp;
