@@ -1,7 +1,12 @@
 function renderProjects(projects) {
   const projectsList = document.querySelector("#projects-list");
   projectsList.innerHTML = "";
-
+  const addTaskPopupButton = document.querySelector("#addTaskPopupButton");
+  if (projects.length < 1) {
+    addTaskPopupButton.classList.add("hidden");
+  } else {
+    addTaskPopupButton.classList.remove("hidden");
+  }
   projects.forEach((project, projectIndex) => {
     const projectListItem = document.createElement("LI");
     projectListItem.classList.add("project");
@@ -17,7 +22,10 @@ function renderProjects(projects) {
   });
 }
 
-function renderTasks(tasks) {
+function renderTasks(tasks = "") {
+  if (tasks === "") {
+    return;
+  }
   const tasksList = document.querySelector("#tasks-list");
   const completedTasksList = document.querySelector("#completed-tasks-list");
   tasksList.innerHTML = "";
