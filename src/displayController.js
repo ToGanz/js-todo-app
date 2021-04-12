@@ -18,18 +18,24 @@ function renderProjects(projects) {
     projectTitle.innerHTML = `${project.title}`;
     projectListItem.appendChild(projectTitle);
 
+    const deleteProjectSpan = document.createElement("SPAN");
+    deleteProjectSpan.id = "close-project";
+    deleteProjectSpan.innerHTML = "x";
+
+    projectListItem.appendChild(deleteProjectSpan);
+
     projectsList.appendChild(projectListItem);
   });
 }
 
 function renderTasks(tasks = "") {
-  if (tasks === "") {
-    return;
-  }
   const tasksList = document.querySelector("#tasks-list");
   const completedTasksList = document.querySelector("#completed-tasks-list");
   tasksList.innerHTML = "";
   completedTasksList.innerHTML = "";
+  if (tasks === "") {
+    return;
+  }
   tasks.forEach((task, taskIndex) => {
     const taskListItem = document.createElement("LI");
     taskListItem.classList.add("task", `task-${taskIndex}`);

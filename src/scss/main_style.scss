@@ -146,6 +146,18 @@ body {
   border-bottom: 4px solid $green;
 }
 
+/* The Close Button */
+#close-project {
+  color: $light_green;
+  float: right;
+  padding-left: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+#close-project:hover {
+  color: $green;
+}
+
 header {
   font-size: 1.5rem;
   margin-bottom: 10px;

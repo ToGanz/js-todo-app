@@ -7,12 +7,17 @@ const projectEventSetUp = (projects) => {
   const projectsList = document.querySelector("#projects-list");
 
   // set active project
-  function setActiveProject(projectId) {
+  function setActiveProject(projectId = "") {
     const activeProjectDiv = document.querySelector(".active-project");
-    activeProjectDiv.id = `project-${projectId}`;
-    const activeProject = projects[projectId];
-    activeProjectDiv.innerHTML = activeProject.title.toUpperCase();
-    renderTasks(activeProject.tasks);
+    if (projectId !== "") {
+      activeProjectDiv.id = `project-${projectId}`;
+      const activeProject = projects[projectId];
+      activeProjectDiv.innerHTML = activeProject.title.toUpperCase();
+      renderTasks(activeProject.tasks);
+    } else {
+      activeProjectDiv.innerHTML = "";
+      renderTasks();
+    }
   }
 
   function setProject(e) {
@@ -42,6 +47,17 @@ const projectEventSetUp = (projects) => {
   }
 
   addProjectbtn.addEventListener("click", addProject);
+
+  function deleteProject(e) {
+    if (e.target.id === "close-project") {
+      const projectId = e.target.parentNode.getAttribute("data-project");
+      projects.splice(projectId, 1);
+      renderProjects(projects);
+      setActiveProject();
+    }
+  }
+
+  projectsList.addEventListener("click", deleteProject);
 };
 
 export default projectEventSetUp;
