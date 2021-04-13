@@ -1,7 +1,7 @@
-##Vanilla JS ToDo App
+## Vanilla JS ToDo App
 
 ToDo App in Vanilla Javascript.
-
+Live Site: [https://toganz.github.io/js-todo-app/]
 You can create projects and tasks within these projects. 
 
 I created this as practice and to appreciate the functionalities of frameworks.
