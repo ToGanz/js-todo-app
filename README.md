@@ -11,7 +11,12 @@ Live Site: [https://toganz.github.io/js-todo-app/]
 
 You can create projects and tasks within these projects. 
 
+Multiple Projects:
+
 ![image](https://user-images.githubusercontent.com/49613341/114518375-944ed880-9c3f-11eb-9d96-bce2120522d0.png)
+
+
+Tasks within project:
 
 ![image](https://user-images.githubusercontent.com/49613341/114518588-cf510c00-9c3f-11eb-94b0-a373a8f8e8cf.png)
 
